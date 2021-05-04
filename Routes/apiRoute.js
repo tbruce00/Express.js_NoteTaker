@@ -1,14 +1,13 @@
 const fs = require('fs');
 const uuid = require('uuid');
 const path = require('path');
-const newNote = require('./Develop/db/db.json');
 const { doesNotThrow } = require('assert');
 
 
 
 module.exports = (app) => {
     app.get('/api/notes', (req, res) => {
-        fs.readFileSync('./Develop/db/db/json', (err, data) => {
+        fs.readFileSync('./Develop/db/db.json', (err, data) => {
             if(err) throw err;
             return res.json(JSON.parse(data))
         })
