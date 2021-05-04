@@ -4,9 +4,6 @@ const path = require('path');
 const newNote = require('./Develop/db/db.json');
 const { doesNotThrow } = require('assert');
 
-app.get('/api/notes', (req, res) => res.json(newNote));
-
-app.post('./api/notes', (req,res) => res.json(newNote));
 
 
 module.exports = (app) => {
