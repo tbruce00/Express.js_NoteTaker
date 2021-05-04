@@ -9,7 +9,7 @@ The objective of this week's assignment was to create an application that allows
 
 You don't need to install anything to use this application
 
-The deployed link lives <a href="https://tbruce00.github.io/Express.js_NoteTaker/">here</a>.
+The deployed link lives <a href="https://stormy-earth-73391.herokuapp.com/">here</a>.
 
 ## Usage
 
