@@ -6,7 +6,7 @@ const uuid = require('uuid');
 
 module.exports = (app) => {
     app.get('/api/notes', (req, res) => {
-        fs.readFileSync('../db/db.json', (err, data) => {
+        fs.readFileSync('./db/db.json', (err, data) => {
             if(err) throw err;
             return res.json(JSON.parse(data))
         })
@@ -14,13 +14,13 @@ module.exports = (app) => {
 });
     app.post('/api/notes', (req, res) => {
         const postNote = req.body;
-        fs.readFile('../db/db.json', (err, data) => {
+        fs.readFile('./db/db.json', (err, data) => {
             if(err) throw err;
             const note = JSON.parse(data)
             postNote.id = uuid.v4()
             note.push(postNote);
             stringNote = JSON.stringify(note);
-            fs.writeFile('../db/db.json', stringNote, (err, data) => {
+            fs.writeFile('./db/db.json', stringNote, (err, data) => {
                 return res.json(postNote)
             })
 
